@@ -1,0 +1,175 @@
+.Window_codecolabWindow {
+  /* Your styles here */
+}
+.d9xrBRfGqN2yJsNOYz6o {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 5px;
+  width: 800px;
+  height: 600px;
+}
+
+.nKp6ZNuRxkekgPObXbXk {
+  padding: 10px 20px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: transparent; /* no background */
+  color: white;
+  box-shadow: none; /* no box shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nKp6ZNuRxkekgPObXbXk:hover {
+  background-color: transparent;
+  box-shadow: none;
+}
+
+.FlPozyRZ3lQ3QlPuE5QC {
+  font-size: 20px;
+  color: #333;
+  margin-right: 10px;
+  font-family: "Arial", sans-serif; /* use Arial font */
+  font-weight: bold; /* make the text bold */
+}
+/* disconnectButton.module.css */
+.F0CrjgQQw0ouJzCZmkOP {
+  background-color: #f44336; /* Red */
+  border: none;
+  color: white;
+  padding: 5px 10px; /* Same size as the menu button */
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease;
+}
+
+.F0CrjgQQw0ouJzCZmkOP:hover {
+  background-color: #d32f2f; /* Darker Red */
+}
+/* DropdownMenu.module.css */
+.LCusNOs6Ad5SlqOlCkfQ {
+  background-color: #7e7e7e; /* white */
+  color: #ffffff; /* dark grey */
+  border: none;
+  border-radius: 1px; /* slightly rounded edges */
+  padding: 5px 10px; /* smaller padding */
+  transition: background-color 0.3s ease;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  border-radius: 5px;
+}
+
+.LCusNOs6Ad5SlqOlCkfQ:hover {
+  background-color: #474747; /* light grey */
+}
+
+.ErIuok7dTxc0fOkyGYkZ {
+  background-color: transparent; /* white */
+  border: none;
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.1); /* subtle box shadow */
+  margin-top: 10px;
+  transition: box-shadow 0.3s ease;
+  color: #000000; /* dark grey */
+}
+
+.ek0929FMF5w07QWKuZ8c {
+  padding: 5px 10px; /* smaller padding */
+  transition: background-color 0.3s ease;
+  color: #ffffff; /* dark grey */
+}
+
+.ek0929FMF5w07QWKuZ8c:hover {
+  background-color: #f6f6f6; /* light grey */
+}
+/* Windowlist.module.css */
+.qxej1Bn2GpfaN9Ut7SQb {
+  display: flex;
+  flex-direction: column;
+  background-color: #1E1E1E;
+  border-radius: 5px;
+  padding: 10px;
+}
+
+.fkic3fFZTmHATY67ZEqZ {
+  border: 1px solid #D4D4D4;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: #00fd1e;
+}
+
+.ymLpveQBOIJ8rWTqzYnB {
+  font-size: 16px;
+  color: #FFFFFF;
+}
+.omnpaUYbt7wGW3ymjYAW {
+  position: fixed;
+  width: 150px; /* Even smaller width */
+  padding: 5px; /* Even smaller padding */
+  bottom: 20px; /* Position at the bottom */
+  right: 20px; /* Position at the right */
+  background-color: rgba(255, 255, 255, 0.6); /* More transparent white */
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  text-align: center;
+  z-index: 1000;
+}
+
+.omnpaUYbt7wGW3ymjYAW h2 {
+  margin: 0;
+  padding: 0;
+  color: #333;
+  font-size: 12px;
+}
+
+.omnpaUYbt7wGW3ymjYAW button:hover {
+  background-color: #555;
+}
+
+@keyframes jhAP9q3jPIo0ptKomU0c {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes CEdhbyGgLiHoi9hhGGU9 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.HgnuRq1mX4Mq6CGnuVTb {
+  animation: CEdhbyGgLiHoi9hhGGU9 1s infinite;
+  font-size: 24px; /* increase the size */
+  font-family: "Arial", sans-serif; /* change the font */
+  font-weight: bold; /* make the text bold */
+}
+
+.DHPtFMBjWlM4mrSNMFCC {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 5px;
+  width: 800px;
+  height: 600px;
+}
+
+/*# sourceMappingURL=main.css.map*/
