@@ -4,13 +4,15 @@ class CreateNewSession {
         this.instance = null
         this.language = null
     }
+    //pushes ws onto clients array
     createSession(ws) {
-        this.instance = { clients: [], sessionFile: this.data }
+        this.instance = { clients: [],sessionFile: this.data }
         this.instance.clients.push(ws)
 
     }
+    //creates a share link for the session with /open?data= appended to the base urlso it that a cutsom service provider will be activated
     createShareLink(inputID) {
-        const baseURL = "http://localhost:80/open";
+        const baseURL = "http://localhost:8000/open";
         // Encode the data string
         const encodedData = encodeURIComponent(inputID);
 
@@ -19,6 +21,7 @@ class CreateNewSession {
 
         return encodedURL;
     }
+    //gets the language of the file
     getLanguage() {
         const f_name = this.instance.sessionFile.file.filename
         const extension = f_name.split('.').pop();
