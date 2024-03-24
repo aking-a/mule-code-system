@@ -108,7 +108,9 @@ researching react and webpack before attemting to make changes to this repo and 
 documentation._
 
 **codecolab file structure and file functionallity:**
+
 ![image](https://github.com/aking-a/mule-code-system/assets/118080508/d63b7d09-a598-4dfe-8d25-7b8f46d09987)
+
 _Screenshot of codecolab's file structure_
 
 
