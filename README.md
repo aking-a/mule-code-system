@@ -8,8 +8,9 @@ Docker, MULE should be running on port 80. Codecolab  will be located in the men
 
 ## Installation
 This will guide you to enable you to be able to install and build MULE with the codecolab plugin already installed. Please note that wsl2 and docker is slow
-and it will take time for the application to work properly if you are using a windows system. This is a known issue and is cause by windows and wsl2. I was
-unable to find a solution to this so I used ubuntu to run and build the MULE contianer.
+and it will take time for the application to work properly if you are using a windows system. This is a known issue and is caused by windows and wsl2. I was
+unable to find a solution to this so I used ubuntu to run and build the MULE contianer, I would reccommned this approach to run and build the application if
+possible.
 1. Clone the repository:
     ```bash
     git clone https://github.com/aking-a/mule-code-system
@@ -32,12 +33,36 @@ unable to find a solution to this so I used ubuntu to run and build the MULE con
     http://localhost:80/
     ```
 ## Usage
-1. Start the application:
-    ```bash
-    npm start
-    ```
+1. Login:
+   If the container has been built correctly you will be greeted with a login page. In the MULE repo
+   navigate to the 'index.html' file in the .login folder.
+2. Open with Live Server:
+   Install the Live Server extension for visual studio code and open the index.html file. You should see this
+   page below. Do not change any of the variables! Click the **build login request button** and then click the
+   **Login with LTI button**.
+   ![image](https://github.com/aking-a/mule-code-system/assets/118080508/f881a5b5-39ea-4aed-839b-76931ff914c2)
+3. Logged in: You should be navigated to the MULE webdesktop which should look like the screenshot below. If you have not been relocated to
+   the MULE try opening localhost in a new tab.
+   ![image](https://github.com/aking-a/mule-code-system/assets/118080508/03d77493-1cdd-44cd-99ca-6a8a40d8f9ec)
+4. Open Codecolab: Navigate to the top left menu button click on it then click the **Other** menu item then
+   **codecolab**. The application landing page should open and look like the screenshot below.
+   ![image](https://github.com/aking-a/mule-code-system/assets/118080508/940787dc-c494-4ebc-b693-082d14dad9ed)
+5. Share file: Click the share file button as instructed and select a file from MULES virtaul file system. You should then
+   be navigated to the main window which is the code editor and it should look like the screenshot provided.
+   ![image](https://github.com/aking-a/mule-code-system/assets/118080508/86dcc22b-a0b6-4ea4-a8e0-1474568729a8)
+6. Other Users: Using the share link you can copy and paste this into a new tab and it will join that session that
+   has been created. You can now start editing the document on either tab and you should see the chnages be reflected
+   in both tabs. Below is a screenshot of what the user that joined the session through the link should look like.
+   Please note that the menu for other users that join the session is diabled so you will not see it on the
+   second tab.
+   ![image](https://github.com/aking-a/mule-code-system/assets/118080508/4a0176f9-19ac-4c67-a327-6b264ffef41d)
 
-2. Open your browser and navigate to `http://localhost:3000`.
+   
+
+
+
+
+8. Open your browser and navigate to `http://localhost:3000`.
 
 ## Contributing
 Please follow these steps to contribute to the project:
