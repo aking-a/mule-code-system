@@ -33,58 +33,89 @@ possible.
     http://localhost:80/
     ```
 ## Usage
-1. Login:
+1. _Login:_
    If the container has been built correctly you will be greeted with a login page. In the MULE repo
    navigate to the 'index.html' file in the .login folder.
-2. Open with Live Server:
+2. _Open with Live Server:_
    Install the Live Server extension for visual studio code and open the index.html file. You should see this
    page below. Do not change any of the variables! Click the **build login request button** and then click the
    **Login with LTI button**.
    ![image](https://github.com/aking-a/mule-code-system/assets/118080508/f881a5b5-39ea-4aed-839b-76931ff914c2)
-3. Logged in: You should be navigated to the MULE webdesktop which should look like the screenshot below. If you have not been relocated to
+3. _Logged in:_
+   You should be navigated to the MULE webdesktop which should look like the screenshot below. If you have not been relocated to
    the MULE try opening localhost in a new tab.
    ![image](https://github.com/aking-a/mule-code-system/assets/118080508/03d77493-1cdd-44cd-99ca-6a8a40d8f9ec)
-4. Open Codecolab: Navigate to the top left menu button click on it then click the **Other** menu item then
+5. _Open Codecolab:_
+   Navigate to the top left menu button click on it then click the **Other** menu item then
    **codecolab**. The application landing page should open and look like the screenshot below.
    ![image](https://github.com/aking-a/mule-code-system/assets/118080508/940787dc-c494-4ebc-b693-082d14dad9ed)
-5. Share file: Click the share file button as instructed and select a file from MULES virtaul file system. You should then
+7. _Share file:_
+   Click the share file button as instructed and select a file from MULES virtaul file system. You should then
    be navigated to the main window which is the code editor and it should look like the screenshot provided.
    ![image](https://github.com/aking-a/mule-code-system/assets/118080508/86dcc22b-a0b6-4ea4-a8e0-1474568729a8)
-6. Other Users: Using the share link you can copy and paste this into a new tab and it will join that session that
+9. _Other Users:_
+   Using the share link you can copy and paste this into a new tab and it will join that session that
    has been created. You can now start editing the document on either tab and you should see the chnages be reflected
    in both tabs. Below is a screenshot of what the user that joined the session through the link should look like.
    Please note that the menu for other users that join the session is diabled so you will not see it on the
    second tab.
    ![image](https://github.com/aking-a/mule-code-system/assets/118080508/4a0176f9-19ac-4c67-a327-6b264ffef41d)
+   
+
+## Contributing
+_Please follow these steps to contribute to the project:_
+I perosonally used the OS.js documentation to create a application inside OS.js and then I copied and pasted that application
+into MULE's directory specifically in **mule/src/packages**. I found it easier to build and test the application without
+Docker and then build the container once the finshed product has been realised.
+1. _Building an application in OS.js:_
+   Go to OS.js and clone it's repository the instructions to set it up on your own machine are explained there. Use the non docker
+   setup instructions!
+     ```OS.js
+     https://manual.os-js.org/
+     ```
+2. _Copy codecolab and build:_
+   Copy the codecolab folder from the MULE repo provided above and copy it into **src/packages** in the OS.js repository on your machine.
+   Assuming you have OS.js running on your local machine stop it and run the commands below.
+     ```package:discover
+     npm run package:discover
+     ```
+     ```run build
+     npm run build
+     ```
+3. _Serve and Watch:_
+   Once the build command has run succesfully OS.js will now be installed as a package. Use the serve command below to start OS.js
+   it should be running on **http://localhost:8000/**. (_An important note to mention is the invite link generator does not take into
+   account what port or url the server is running on so please change this in the source code. The link generator is locted in codecolab
+   /server_modules/newsession.js line 15._). To run a watch on codecolab package use the commands provided below.
+    ```
+    cd src/packages/codecolab
+    ```
+    ```
+    npm run watch
+    ```
+
+## Design Explained
+This section will cover OS.js's overall archetecture and codecolabs files and structure along with libraries and packages used
 
    
 
 
 
 
-8. Open your browser and navigate to `http://localhost:3000`.
 
-## Contributing
-Please follow these steps to contribute to the project:
 
-1. Fork the repository.
 
-2. Create a new branch:
-    ```bash
-    git checkout -b feature/your-feature
-    ```
 
-3. Make your changes and commit them:
-    ```bash
-    git commit -m "Add your commit message here"
-    ```
 
-4. Push your changes to your forked repository:
-    ```bash
-    git push origin feature/your-feature
-    ```
 
-5. Open a pull request in the original repository.
 
-## License
-This project is licensed under the [MIT License](LICENSE).
+
+
+
+
+
+
+
+
+
+
