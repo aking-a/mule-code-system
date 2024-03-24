@@ -155,6 +155,7 @@ Each files will now be explained:
   session.
 - **appdata.js:** This is a class that is created in _index.js_ and stores all the app data such as core for later use in other files.
   Below is a screenshot of its contents.
+  
   ![image](https://github.com/aking-a/mule-code-system/assets/118080508/86536bfd-274b-42b8-994b-3c4b0b508cf4)
 
 - **editoroptions.js:** This is the options used for monaco editor.
@@ -162,7 +163,29 @@ Each files will now be explained:
 - **sessionclass.js:** A lot of variables are stored in the session class as you might have noticed. This class object is creted before
   the user is navigated to the main page and is interacted with throughout the app. It is basically makes the variables within it
   globally accessable to any file in the applicarion. Below is a screenshot of the class.
+  
   ![image](https://github.com/aking-a/mule-code-system/assets/118080508/89a94d64-28b5-453e-ac83-e764ddd30281)
+
+- **useActionListener.js:** This file uses a hook that uses useEffect() from react to listen for changes in the document that monaco has loaded.
+  Once a change has been detected it packages that change and sends it to the server via the clientChange() function.
+- **useDidMountListener.js:** Listens for the Monaco editor DIDMount and sets up the session by setting the userID code and other variables.
+- **useListListener.js:** Listens for changes being made to the usernames list and applies the updated list to the itemlist in the
+  _userlistwindow_. This causes the component to re-render the list when a new user joins or leaves.
+- **useSetApp.js:** Stores the AppData class object so it can be retrieved from any file.
+- **useShowPopupListener.js:** Shows the Popup for 3 seconds then sets the UseState to false to hide the popup.
+- **useSocketListener.js:** Listens for incoming socket messages from the server and handles them.
+- **fileselector.js:** This file is the landing page for creating a session. It just loads the svg icon and text. The click event is
+  handled by the _clickEvent()_ function.
+- **filesession.js:** This is the main page in the applicaton and all the components are useHooks are imported and used here. The react-monaco-editor
+  is used here and is rendered in this section. A lot of the useStates are also set up and used here.
+- **joinlanding.js:** This is the alternate route that users that are joining a session take. The reason behind this was to skip the file selector as users
+  joining a session are not allowed to select a file. Addtionally it displays a flashing loading text while the user is joining the session.
+- **clickevent.js:** This is resonsible for handling the clickEvent from _fileselector_. It loads and stores the selected file data in the session class
+  object.
+- **renderlist.js:** Creates a new OS.js window and renders the list component inside it.
+- **handlechnages.js:** Applies the incoming changes from the server to the document.
+- **handledidmount.js:** Handles the did mount of the monaco editor.
+- **handleReadOnlyLines.js:** Makes lines read only by moving the cursor away from lines that are in the set of locked lines.
 
 
 
