@@ -150,7 +150,10 @@ Each files will now be explained:
 - **dropdown.js:** This is a component that constructs the dropdown menu for the app. The dropdown contains two options, save and user list. Save simply
   saves the file and user list lists the user in the session. The selection of a item in the menu is handled in handleSelect function. This component
   also sets up the usernames UseState array which keeps track of the users usernames that are connected to the session.
- 
+- **left_join_alert:** This is the popup component that appears when a user joins or leaves a session.
+- **userlistwindow:** This is the component that is rendered inside the user list window. It is responsible for diplaying the current list of users in a
+  session.
+- **appdata.js:** This is a class that is created in _index.js_ and stores all the app data such as core for later use in other files.
 
 
    
