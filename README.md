@@ -154,6 +154,17 @@ Each files will now be explained:
 - **userlistwindow:** This is the component that is rendered inside the user list window. It is responsible for diplaying the current list of users in a
   session.
 - **appdata.js:** This is a class that is created in _index.js_ and stores all the app data such as core for later use in other files.
+  Below is a screenshot of its contents.
+  ![image](https://github.com/aking-a/mule-code-system/assets/118080508/86536bfd-274b-42b8-994b-3c4b0b508cf4)
+
+- **editoroptions.js:** This is the options used for monaco editor.
+- **file.js:** This is a class object that stores the file path data and the content of the file after it has been loaded from OS.js's _vfs_.
+- **sessionclass.js:** A lot of variables are stored in the session class as you might have noticed. This class object is creted before
+  the user is navigated to the main page and is interacted with throughout the app. It is basically makes the variables within it
+  globally accessable to any file in the applicarion. Below is a screenshot of the class.
+  ![image](https://github.com/aking-a/mule-code-system/assets/118080508/89a94d64-28b5-453e-ac83-e764ddd30281)
+
+
 
 
    
