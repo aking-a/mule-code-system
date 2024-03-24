@@ -1,7 +1,7 @@
 # Codecolab
 
 ## Description
-This project is a plugin that has been built inside OS.js. MULE itself is a plugin with multiple packages that allow it to create
+This project is a plugin that has been built inside OS.js. MULE itself is a plugin built on top of OS.js's framework with multiple packages that allow it to create
 a learning environment for Maynooth university students. Codecolab (the project itslef) has been installed inside MULE as a plugin to allow for anyone using the
 MULE environment to have the ability to collaboratively edit code documents in real time with their friends. Once MULE has been installed on your machine using 
 Docker, MULE should be running on port 80. Codecolab  will be located in the menu on the top left under the 'Other' menu item. 
@@ -9,14 +9,21 @@ Docker, MULE should be running on port 80. Codecolab  will be located in the men
 ## Installation
 1. Clone the repository:
     ```bash
-    git clone https://github.com/your-username/your-repo.git
+    git clone https://github.com/aking-a/mule-code-system
     ```
 
-2. Install the dependencies:
-    ```bash
-    npm install
+2. Install the docker desktop:
+    ```Website
+    https://www.docker.com/products/docker-desktop/
     ```
-
+3. Enable linux subsystem wsl2 if you are using windows:
+```wsl setup instructions
+https://learn.microsoft.com/en-us/windows/wsl/install
+```
+4. Build and Run the container:
+   ```bash
+   docker-compose up -d
+   ```
 ## Usage
 1. Start the application:
     ```bash
