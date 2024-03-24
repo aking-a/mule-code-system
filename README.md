@@ -40,26 +40,26 @@ possible.
    Install the Live Server extension for visual studio code and open the index.html file. You should see this
    page below. Do not change any of the variables! Click the **build login request button** and then click the
    **Login with LTI button**.
-   ![image](https://github.com/aking-a/mule-code-system/assets/118080508/f881a5b5-39ea-4aed-839b-76931ff914c2)
+   ![alt text](image-1.png)
 3. _Logged in:_
    You should be navigated to the MULE web desktop which should look like the screenshot below. If you have not been relocated to
    the MULE try opening localhost in a new tab.
-   ![image](https://github.com/aking-a/mule-code-system/assets/118080508/03d77493-1cdd-44cd-99ca-6a8a40d8f9ec)
+   ![alt text](image-2.png)
 5. _Open Codecolab:_
    Navigate to the top left menu button click on it then click the **Other** menu item then
    **codecolab**. The application landing page should open and look like the screenshot below.
-   ![image](https://github.com/aking-a/mule-code-system/assets/118080508/940787dc-c494-4ebc-b693-082d14dad9ed)
+   ![alt text](image-3.png)
 7. _Share file:_
    Click the share file button as instructed and select a file from MULES virtual file system. You should then
    be navigated to the main window which is the code editor and it should look like the screenshot provided.
-   ![image](https://github.com/aking-a/mule-code-system/assets/118080508/86dcc22b-a0b6-4ea4-a8e0-1474568729a8)
+   ![alt text](image-4.png)
 9. _Other Users:_
    Using the share link you can copy and paste this into a new tab and it will join that session that
    has been created. You can now start editing the document on either tab and you should see the changes be reflected
    in both tabs. Below is a screenshot of what the user that joined the session through the link should look like.
    Please note that the menu for other users that join the session is disabled so you will not see it on the
    second tab.
-   ![image](https://github.com/aking-a/mule-code-system/assets/118080508/4a0176f9-19ac-4c67-a327-6b264ffef41d)
+   ![alt text](image-5.png)
    
 
 ## Contributing
@@ -106,7 +106,7 @@ This section will cover OS.js's overall architecture and codecolabs files and st
 
 _This is a screenshot from OS.js that provides a high-level overview of how it's framework works_
 
-![image](https://github.com/aking-a/mule-code-system/assets/118080508/10773359-6da4-4b09-8f2b-503644f2f717)
+![alt text](image-6.png)
 
 This image shows how applications are built inside a window and contained within OS.js web desktop.
 
@@ -118,7 +118,7 @@ documentation._
 
 **codecolab file structure and file functionality:**
 
-![image](https://github.com/aking-a/mule-code-system/assets/118080508/d63b7d09-a598-4dfe-8d25-7b8f46d09987)
+![alt text](image-7.png)
 
 _Screenshot of codecolab's file structure_
 
@@ -140,7 +140,7 @@ Each files will now be explained:
   inside the window that has been created. The react app is attached to the _$content_ element. The apps relevant variables are stored inside AppData class
   object for later use. Below is a screenshot of the code performing this action. The socket connection to OS.js is also setup here.
   
-  ![image](https://github.com/aking-a/mule-code-system/assets/118080508/e979ad2b-ce9f-4fc6-8370-b8b35e75ad88)
+  ![alt text](image-8.png)
 
 - **App.js:** This is the main entry point for the react app. The '/' route is served unless it is a client connecting through on invite link then 'Landing'
   will be served to the client. The is all done through the Browser Router package and the navigate function.
@@ -156,7 +156,7 @@ Each files will now be explained:
 - **appdata.js:** This is a class that is created in _index.js_ and stores all the app data such as core for later use in other files.
   Below is a screenshot of its contents.
   
-  ![image](https://github.com/aking-a/mule-code-system/assets/118080508/86536bfd-274b-42b8-994b-3c4b0b508cf4)
+  ![alt text](image-9.png)
 
 - **editoroptions.js:** This is the options used for Monaco editor.
 - **file.js:** This is a class object that stores the file path data and the content of the file after it has been loaded from OS.js's _vfs_.
@@ -164,7 +164,7 @@ Each files will now be explained:
   the user is navigated to the main page and is interacted with throughout the app. It is basically makes the variables within it
   globally accessible to any file in the application. Below is a screenshot of the class.
   
-  ![image](https://github.com/aking-a/mule-code-system/assets/118080508/89a94d64-28b5-453e-ac83-e764ddd30281)
+  ![alt text](image-10.png)
 
 - **useActionListener.js:** This file uses a hook that uses useEffect() from react to listen for changes in the document that Monaco has loaded.
   Once a change has been detected it packages that change and sends it to the server via the clientChange() function.
