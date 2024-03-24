@@ -105,7 +105,9 @@ Docker and then build the container once the finshed product has been realised.
 This section will cover OS.js's overall archetecture and codecolabs files and structure along with libraries and packages used.
 
 _This is a screenshot from OS.js that provides a high level overview of how it's framework works_
+
 ![image](https://github.com/aking-a/mule-code-system/assets/118080508/10773359-6da4-4b09-8f2b-503644f2f717)
+
 This image shows how applications are built inside a window and contained within OS.js webdesktop.
 
 Codecolab itself is an appliaction and through the use of react I was able to render a react app inside
