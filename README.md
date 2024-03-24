@@ -7,6 +7,9 @@ MULE environment to have the ability to collaboratively edit code documents in r
 Docker, MULE should be running on port 80. Codecolab  will be located in the menu on the top left under the 'Other' menu item. 
 
 ## Installation
+This will guide you to enable you to be able to install and build MULE with the codecolab plugin already installed. Please note that wsl2 and docker is slow
+and it will take time for the application to work properly if you are using a windows system. This is a known issue and is cause by windows and wsl2. I was
+unable to find a solution to this so I used ubuntu to run and build the MULE contianer.
 1. Clone the repository:
     ```bash
     git clone https://github.com/aking-a/mule-code-system
@@ -23,6 +26,10 @@ Docker, MULE should be running on port 80. Codecolab  will be located in the men
 4. Build and Run the container:
     ```bash
     docker-compose up -d
+    ```
+5. Open your browser on localhost:
+    ```localhost
+    http://localhost:80/
     ```
 ## Usage
 1. Start the application:
