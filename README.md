@@ -1,15 +1,15 @@
-w# Codecolab
+# Codecolab
 
 ## Description
 This project is a plugin that has been built inside OS.js. MULE itself is a plugin built on top of OS.js's framework with multiple packages that allow it to create
-a learning environment for Maynooth university students. Codecolab (the project itslef) has been installed inside MULE as a plugin to allow for anyone using the
+a learning environment for Maynooth university students. Codecolab (the project itself) has been installed inside MULE as a plugin to allow for anyone using the
 MULE environment to have the ability to collaboratively edit code documents in real time with their friends. Once MULE has been installed on your machine using 
-Docker, MULE should be running on port 80. Codecolab  will be located in the menu on the top left under the 'Other' menu item. 
+Docker, MULE should be running on port 80. Codecolab will be located in the menu on the top left under the 'Other' menu item. 
 
 ## Installation
 This will guide you to enable you to be able to install and build MULE with the codecolab plugin already installed. Please note that wsl2 and docker is slow
 and it will take time for the application to work properly if you are using a windows system. This is a known issue and is caused by windows and wsl2. I was
-unable to find a solution to this so I used ubuntu to run and build the MULE contianer, I would reccommned this approach to run and build the application if
+unable to find a solution to this so I used ubuntu to run and build the MULE container, I would recommend this approach to run and build the application if
 possible.
 1. Clone the repository:
     ```bash
@@ -20,7 +20,7 @@ possible.
     ```Website
     https://www.docker.com/products/docker-desktop/
     ```
-3. Enable linux subsystem wsl2 if you are using windows:
+3. Enable Linux subsystem wsl2 if you are using windows:
     ```wsl setup instructions
     https://learn.microsoft.com/en-us/windows/wsl/install
     ```
@@ -42,7 +42,7 @@ possible.
    **Login with LTI button**.
    ![image](https://github.com/aking-a/mule-code-system/assets/118080508/f881a5b5-39ea-4aed-839b-76931ff914c2)
 3. _Logged in:_
-   You should be navigated to the MULE webdesktop which should look like the screenshot below. If you have not been relocated to
+   You should be navigated to the MULE web desktop which should look like the screenshot below. If you have not been relocated to
    the MULE try opening localhost in a new tab.
    ![image](https://github.com/aking-a/mule-code-system/assets/118080508/03d77493-1cdd-44cd-99ca-6a8a40d8f9ec)
 5. _Open Codecolab:_
@@ -50,25 +50,25 @@ possible.
    **codecolab**. The application landing page should open and look like the screenshot below.
    ![image](https://github.com/aking-a/mule-code-system/assets/118080508/940787dc-c494-4ebc-b693-082d14dad9ed)
 7. _Share file:_
-   Click the share file button as instructed and select a file from MULES virtaul file system. You should then
+   Click the share file button as instructed and select a file from MULES virtual file system. You should then
    be navigated to the main window which is the code editor and it should look like the screenshot provided.
    ![image](https://github.com/aking-a/mule-code-system/assets/118080508/86dcc22b-a0b6-4ea4-a8e0-1474568729a8)
 9. _Other Users:_
    Using the share link you can copy and paste this into a new tab and it will join that session that
-   has been created. You can now start editing the document on either tab and you should see the chnages be reflected
+   has been created. You can now start editing the document on either tab and you should see the changes be reflected
    in both tabs. Below is a screenshot of what the user that joined the session through the link should look like.
-   Please note that the menu for other users that join the session is diabled so you will not see it on the
+   Please note that the menu for other users that join the session is disabled so you will not see it on the
    second tab.
    ![image](https://github.com/aking-a/mule-code-system/assets/118080508/4a0176f9-19ac-4c67-a327-6b264ffef41d)
    
 
 ## Contributing
 _Please follow these steps to contribute to the project:_
-I perosonally used the OS.js documentation to create a application inside OS.js and then I copied and pasted that application
+I personally used the OS.js documentation to create a application inside OS.js and then I copied and pasted that application
 into MULE's directory specifically in **mule/src/packages**. I found it easier to build and test the application without
-Docker and then build the container once the finshed product has been realised.
+Docker and then build the container once the finished product has been realised.
 1. _Building an application in OS.js:_
-   Go to OS.js and clone it's repository the instructions to set it up on your own machine are explained there. Use the non docker
+   Go to OS.js and clone its repository the instructions to set it up on your own machine are explained there. Use the non-docker
    setup instructions!
      ```OS.js
      https://manual.os-js.org/
@@ -90,9 +90,9 @@ Docker and then build the container once the finshed product has been realised.
      npm run build
      ```
 3. _Serve and Watch:_
-   Once the build command has run succesfully codecolab will now be installed as a package. Use the **npm run serve** command to start OS.js
+   Once the build command has run successfully codecolab will now be installed as a package. Use the **npm run serve** command to start OS.js
    it should be running on **http://localhost:8000/**. (_An important note to mention is the invite link generator does not take into
-   account what port or url the server is running on so please change this in the source code. The link generator is locted in codecolab
+   account what port or URL the server is running on so please change this in the source code. The link generator is located in codecolab
    /server_modules/newsession.js line 15._). To run a watch on codecolab package use the commands provided below.
     ```
     cd src/packages/codecolab
@@ -102,21 +102,21 @@ Docker and then build the container once the finshed product has been realised.
     ```
 
 ## Design Explained
-This section will cover OS.js's overall archetecture and codecolabs files and structure along with libraries and packages used.
+This section will cover OS.js's overall architecture and codecolabs files and structure along with libraries and packages used.
 
-_This is a screenshot from OS.js that provides a high level overview of how it's framework works_
+_This is a screenshot from OS.js that provides a high-level overview of how it's framework works_
 
 ![image](https://github.com/aking-a/mule-code-system/assets/118080508/10773359-6da4-4b09-8f2b-503644f2f717)
 
-This image shows how applications are built inside a window and contained within OS.js webdesktop.
+This image shows how applications are built inside a window and contained within OS.js web desktop.
 
-Codecolab itself is an appliaction and through the use of react I was able to render a react app inside
+Codecolab itself is an application and through the use of react I was able to render a react app inside
 one of these windows. The react app navigates to its different routes using a react library called BrowserRouter.
-The OS.js itslef along with all of its packages is bundled and served using webpack therefore _I would reccommend
-researching react and webpack before attemting to make changes to this repo and of course research the OS.js
+The OS.js itself along with all of its packages is bundled and served using webpack therefore _I would recommend
+researching react and webpack before attempting to make changes to this repo and of course research the OS.js
 documentation._
 
-**codecolab file structure and file functionallity:**
+**codecolab file structure and file functionality:**
 
 ![image](https://github.com/aking-a/mule-code-system/assets/118080508/d63b7d09-a598-4dfe-8d25-7b8f46d09987)
 
@@ -125,9 +125,9 @@ _Screenshot of codecolab's file structure_
 **Top Level**
 As seen in the screenshot above the top level contains the folders assets, components, data, hooks, pages, utils.
 
-- _Assets_ contins all the styling for the pages and components in the app.
+- _Assets_ contains all the styling for the pages and components in the app.
 - _components_ contains all the components for the app such as the dropdown menu and buttons.
-- _data_ contins all the session data such as the file being used and the monaco editor options.
+- _data_ contains all the session data such as the file being used and the Monaco editor options.
 - _hooks_ contains all the react hooks used in the app.
 - _Pages_ contains the pages/routes that the application uses
 - _Utils_ contains important functions that are used in different parts of the application like on click events
@@ -137,36 +137,36 @@ As seen in the screenshot above the top level contains the folders assets, compo
 Each files will now be explained:
 
 - **index.js:** This is the entry point in the application and it is where the window is created. The react app is imported to this application and is rendered
-  inside the window that has been created. The react app is attached to the _$content_ element. The apps relavent variables are stored inside AppData class
+  inside the window that has been created. The react app is attached to the _$content_ element. The apps relevant variables are stored inside AppData class
   object for later use. Below is a screenshot of the code performing this action. The socket connection to OS.js is also setup here.
   
   ![image](https://github.com/aking-a/mule-code-system/assets/118080508/e979ad2b-ce9f-4fc6-8370-b8b35e75ad88)
 
 - **App.js:** This is the main entry point for the react app. The '/' route is served unless it is a client connecting through on invite link then 'Landing'
-  will be served to the client. The is all done through the Browser Router package and the navigate funtion.
+  will be served to the client. The is all done through the Browser Router package and the navigate function.
 
-- **Disconnect.js:** This is the disconnect button component. Its logic is handled in the _handleDiconnect_ funtion which basically sends a ws json to the
+- **Disconnect.js:** This is the disconnect button component. Its logic is handled in the _handleDiconnect_ function which basically sends a ws Json to the
   server telling it to remove that websoket from the session. It also uses the chakra UI library to help position it.
 - **dropdown.js:** This is a component that constructs the dropdown menu for the app. The dropdown contains two options, save and user list. Save simply
   saves the file and user list lists the user in the session. The selection of a item in the menu is handled in handleSelect function. This component
   also sets up the usernames UseState array which keeps track of the users usernames that are connected to the session.
 - **left_join_alert:** This is the popup component that appears when a user joins or leaves a session.
-- **userlistwindow:** This is the component that is rendered inside the user list window. It is responsible for diplaying the current list of users in a
+- **userlistwindow:** This is the component that is rendered inside the user list window. It is responsible for displaying the current list of users in a
   session.
 - **appdata.js:** This is a class that is created in _index.js_ and stores all the app data such as core for later use in other files.
   Below is a screenshot of its contents.
   
   ![image](https://github.com/aking-a/mule-code-system/assets/118080508/86536bfd-274b-42b8-994b-3c4b0b508cf4)
 
-- **editoroptions.js:** This is the options used for monaco editor.
+- **editoroptions.js:** This is the options used for Monaco editor.
 - **file.js:** This is a class object that stores the file path data and the content of the file after it has been loaded from OS.js's _vfs_.
-- **sessionclass.js:** A lot of variables are stored in the session class as you might have noticed. This class object is creted before
+- **sessionclass.js:** A lot of variables are stored in the session class as you might have noticed. This class object is created before
   the user is navigated to the main page and is interacted with throughout the app. It is basically makes the variables within it
-  globally accessable to any file in the applicarion. Below is a screenshot of the class.
+  globally accessible to any file in the application. Below is a screenshot of the class.
   
   ![image](https://github.com/aking-a/mule-code-system/assets/118080508/89a94d64-28b5-453e-ac83-e764ddd30281)
 
-- **useActionListener.js:** This file uses a hook that uses useEffect() from react to listen for changes in the document that monaco has loaded.
+- **useActionListener.js:** This file uses a hook that uses useEffect() from react to listen for changes in the document that Monaco has loaded.
   Once a change has been detected it packages that change and sends it to the server via the clientChange() function.
 - **useDidMountListener.js:** Listens for the Monaco editor DIDMount and sets up the session by setting the userID code and other variables.
 - **useListListener.js:** Listens for changes being made to the usernames list and applies the updated list to the itemlist in the
@@ -176,60 +176,34 @@ Each files will now be explained:
 - **useSocketListener.js:** Listens for incoming socket messages from the server and handles them.
 - **fileselector.js:** This file is the landing page for creating a session. It just loads the svg icon and text. The click event is
   handled by the _clickEvent()_ function.
-- **filesession.js:** This is the main page in the applicaton and all the components are useHooks are imported and used here. The react-monaco-editor
+- **filesession.js:** This is the main page in the application and all the components are useHooks are imported and used here. The react-monaco-editor
   is used here and is rendered in this section. A lot of the useStates are also set up and used here.
 - **joinlanding.js:** This is the alternate route that users that are joining a session take. The reason behind this was to skip the file selector as users
-  joining a session are not allowed to select a file. Addtionally it displays a flashing loading text while the user is joining the session.
-- **clickevent.js:** This is resonsible for handling the clickEvent from _fileselector_. It loads and stores the selected file data in the session class
+  joining a session are not allowed to select a file. Additionally it displays a flashing loading text while the user is joining the session.
+- **clickevent.js:** This is responsible for handling the clickEvent from _fileselector_. It loads and stores the selected file data in the session class
   object.
 - **renderlist.js:** Creates a new OS.js window and renders the list component inside it.
 - **handlechnages.js:** Applies the incoming changes from the server to the document.
-- **handledidmount.js:** Handles the did mount of the monaco editor.
+- **handledidmount.js:** Handles the did mount of the Monaco editor.
 - **handleReadOnlyLines.js:** Makes lines read only by moving the cursor away from lines that are in the set of locked lines.
 - **handlesocketoutgoing.js:** Handles the outgoing events that are sent to the websocket server.
 - **getusername.js:** Gets the username that has been used to log into MULE or OS.js and applies a random number to it and returns it.
 - **updateList.js:** Adds and removes usernames from the user list _(the list of users in the session)_.
 -  **getSession.js:** Stores and Returns the _sessionclass_ object. It also has a function called _Terminate()_ that destroys the object.
--  **handleSelect.js:** Handles the selction of a menu item from the dropdown menu.
+-  **handleSelect.js:** Handles the selection of a menu item from the dropdown menu.
 -  **openfile.js:** This file is responsible for loading a file from OS.js's _vfs_ using promises.
 -  **savefile.js:** This file saves a file to OS.js's file system using the file data from the _fileclass_ object.
 -  **server.js:** This server handles all the connected websockets and broadcasts changes to connected clients. Each session is stored in a
-   _createnewsession_ class. This class stores all of the relavent data for a session such as the file being edited and a list of the
-   websockets connected to that session. Then each of these clases is stored in a json that is identifies using a crypto generated key
-   which serves as it's unique identifier. All of the other cases are handled here aswell such as disconnect broadcast and acuiring locks
+   _createnewsession_ class. This class stores all of the relevant data for a session such as the file being edited and a list of the
+   websockets connected to that session. Then each of these classes is stored in a Json that is identifies using a crypto generated key
+   which serves as it's unique identifier. All of the other cases are handled here aswell such as disconnect broadcast and acquiring locks
    etc.
-- **onDisconnect.js:** This handles the broadcast when a user disconnecects or loses connection to the sesion. It also deletes the session
+- **onDisconnect.js:** This handles the broadcast when a user disconnects or loses connection to the session. It also deletes the session
   and forces connected users to leave if the user that left is the admin. It will also remove connected clients from the client array if they
   are not an admin.
-- **serverDocEditor.js:** This is responsible for modifiying the document state on the server.
-- **tryoperation.js:** This file broacasts the lock and release of a line.
+- **serverDocEditor.js:** This is responsible for modifying the document state on the server.
+- **tryoperation.js:** This file broadcasts the lock and release of a line.
 - **linelock.js:** This is the logic that is responsible for locking the line.
-- **newsession.js:** This creats an object that stores the session data. A new session object is created each time a user creates a new file sharing session.
+- **newsession.js:** This creates an object that stores the session data. A new session object is created each time a user creates a new file sharing session.
   It also has _createShareLink()_ and _getLanguage()_ which is responsible for creating the share link and extracting the language of the file from its
   extension.
- 
-
-
-
-   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
