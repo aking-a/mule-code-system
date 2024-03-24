@@ -113,6 +113,23 @@ documentation._
 
 _Screenshot of codecolab's file structure_
 
+**Top Level**
+As seen in the screenshot above the top level contains the folders assets, components, data, hooks, pages, utils.
+
+- _Assets_ contins all the styling for the pages and components in the app.
+- _components_ contains all the components for the app such as the dropdown menu and buttons.
+- _data_ contins all the session data such as the file being used and the monaco editor options.
+- _hooks_ contains all the react hooks used in the app.
+- _Pages_ contains the pages/routes that the application uses
+- _Utils_ contains important functions that are used in different parts of the application like on click events
+
+**File Description**
+
+Each files will now be explained:
+
+- **index.js:** This is the entry point in the application and it is where the window is created. The react app is imported to this application and is rendered
+  inside the window that has been created. The react app is attached to the _$content_ element. The apps relavent variables are stored inside AppData class
+  object for later use. 
 
 
 
