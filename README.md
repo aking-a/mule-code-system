@@ -76,6 +76,13 @@ Docker and then build the container once the finshed product has been realised.
 2. _Copy codecolab and build:_
    Copy the codecolab folder from the MULE repo provided above and copy it into **src/packages** in the OS.js repository on your machine.
    Assuming you have OS.js running on your local machine stop it and run the commands below.
+     ```cd
+     cd src/packages/codecolab
+     ```
+     ```install
+     npm install
+     ```
+     _cd back out of src/packages/codecolab_
      ```package:discover
      npm run package:discover
      ```
@@ -83,7 +90,7 @@ Docker and then build the container once the finshed product has been realised.
      npm run build
      ```
 3. _Serve and Watch:_
-   Once the build command has run succesfully OS.js will now be installed as a package. Use the serve command below to start OS.js
+   Once the build command has run succesfully codecolab will now be installed as a package. Use the **npm run serve** command to start OS.js
    it should be running on **http://localhost:8000/**. (_An important note to mention is the invite link generator does not take into
    account what port or url the server is running on so please change this in the source code. The link generator is locted in codecolab
    /server_modules/newsession.js line 15._). To run a watch on codecolab package use the commands provided below.
@@ -132,9 +139,15 @@ Each files will now be explained:
   object for later use. Below is a screenshot of the code performing this action. The socket connection to OS.js is also setup here.
   ![image](https://github.com/aking-a/mule-code-system/assets/118080508/e979ad2b-ce9f-4fc6-8370-b8b35e75ad88)
 
-- **App.js:** This is the main entry point for the react app.
+- **App.js:** This is the main entry point for the react app. The '/' route is served unless it is a client connecting through on invite link then 'Landing'
+  will be served to the client. The is all done through the Browser Router package and the navigate funtion.
 
-
+- **Disconnect.js:** This is the disconnect button component. Its logic is handled in the _handleDiconnect_ funtion which basically sends a ws json to the
+  server telling it to remove that websoket from the session. It also uses the chakra UI library to help position it.
+- **dropdown.js:** This is a component that constructs the dropdown menu for the app. The dropdown contains two options, save and user list. Save simply
+  saves the file and user list lists the user in the session. The selection of a item in the menu is handled in handleSelect function. This component
+  also sets up the usernames UseState array which keeps track of the users usernames that are connected to the session.
+ 
 
 
    
