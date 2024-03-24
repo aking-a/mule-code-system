@@ -186,6 +186,13 @@ Each files will now be explained:
 - **handlechnages.js:** Applies the incoming changes from the server to the document.
 - **handledidmount.js:** Handles the did mount of the monaco editor.
 - **handleReadOnlyLines.js:** Makes lines read only by moving the cursor away from lines that are in the set of locked lines.
+- **handlesocketoutgoing.js:** Handles the outgoing events that are sent to the websocket server.
+- **getusername.js:** Gets the username that has been used to log into MULE or OS.js and applies a random number to it and returns it.
+- **updateList.js:** Adds and removes usernames from the user list _(the list of users in the session)_.
+-  **getSession.js:** Stores and Returns the _sessionclass_ object. It also has a function called _Terminate()_ that destroys the object.
+-  **handleSelect.js:** Handles the selction of a menu item from the dropdown menu.
+-  **openfile.js:** This file is responsible for loading a file from OS.js's _vfs_ using promises.
+-  **savefile.js:** This file saves a file to OS.js's file system using the file data from the _fileclass_ object.
 
 
 
