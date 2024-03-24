@@ -1,4 +1,4 @@
-# Codecolab
+w# Codecolab
 
 ## Description
 This project is a plugin that has been built inside OS.js. MULE itself is a plugin built on top of OS.js's framework with multiple packages that allow it to create
@@ -129,7 +129,11 @@ Each files will now be explained:
 
 - **index.js:** This is the entry point in the application and it is where the window is created. The react app is imported to this application and is rendered
   inside the window that has been created. The react app is attached to the _$content_ element. The apps relavent variables are stored inside AppData class
-  object for later use. 
+  object for later use. Below is a screenshot of the code performing this action. The socket connection to OS.js is also setup here.
+  ![image](https://github.com/aking-a/mule-code-system/assets/118080508/e979ad2b-ce9f-4fc6-8370-b8b35e75ad88)
+
+- **App.js:** This is the main entry point for the react app.
+
 
 
 
