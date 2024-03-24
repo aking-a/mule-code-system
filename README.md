@@ -193,7 +193,21 @@ Each files will now be explained:
 -  **handleSelect.js:** Handles the selction of a menu item from the dropdown menu.
 -  **openfile.js:** This file is responsible for loading a file from OS.js's _vfs_ using promises.
 -  **savefile.js:** This file saves a file to OS.js's file system using the file data from the _fileclass_ object.
-
+-  **server.js:** This server handles all the connected websockets and broadcasts changes to connected clients. Each session is stored in a
+   _createnewsession_ class. This class stores all of the relavent data for a session such as the file being edited and a list of the
+   websockets connected to that session. Then each of these clases is stored in a json that is identifies using a crypto generated key
+   which serves as it's unique identifier. All of the other cases are handled here aswell such as disconnect broadcast and acuiring locks
+   etc.
+- **onDisconnect.js:** This handles the broadcast when a user disconnecects or loses connection to the sesion. It also deletes the session
+  and forces connected users to leave if the user that left is the admin. It will also remove connected clients from the client array if they
+  are not an admin.
+- **serverDocEditor.js:** This is responsible for modifiying the document state on the server.
+- **tryoperation.js:** This file broacasts the lock and release of a line.
+- **linelock.js:** This is the logic that is responsible for locking the line.
+- **newsession.js:** This creats an object that stores the session data. A new session object is created each time a user creates a new file sharing session.
+  It also has _createShareLink()_ and _getLanguage()_ which is responsible for creating the share link and extracting the language of the file from its
+  extension.
+ 
 
 
 
