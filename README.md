@@ -17,13 +17,13 @@ Docker, MULE should be running on port 80. Codecolab  will be located in the men
     https://www.docker.com/products/docker-desktop/
     ```
 3. Enable linux subsystem wsl2 if you are using windows:
-```wsl setup instructions
-https://learn.microsoft.com/en-us/windows/wsl/install
-```
+    ```wsl setup instructions
+    https://learn.microsoft.com/en-us/windows/wsl/install
+    ```
 4. Build and Run the container:
-   ```bash
-   docker-compose up -d
-   ```
+    ```bash
+    docker-compose up -d
+    ```
 ## Usage
 1. Start the application:
     ```bash
