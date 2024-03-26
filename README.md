@@ -41,18 +41,22 @@ possible.
    page below. Do not change any of the variables! Click the **build login request button** and then click the
    **Login with LTI button**.
    ![alt text](image-1.png)
+
 3. _Logged in:_
    You should be navigated to the MULE web desktop which should look like the screenshot below. If you have not been relocated to
    the MULE try opening localhost in a new tab.
    ![alt text](image-2.png)
+
 5. _Open Codecolab:_
    Navigate to the top left menu button click on it then click the **Other** menu item then
    **codecolab**. The application landing page should open and look like the screenshot below.
    ![alt text](image-3.png)
+
 7. _Share file:_
    Click the share file button as instructed and select a file from MULES virtual file system. You should then
    be navigated to the main window which is the code editor and it should look like the screenshot provided.
    ![alt text](image-4.png)
+
 9. _Other Users:_
    Using the share link you can copy and paste this into a new tab and it will join that session that
    has been created. You can now start editing the document on either tab and you should see the changes be reflected
@@ -101,7 +105,6 @@ Docker and then build the container once the finished product had been realised.
     ```
     npm run watch
     ```
-
 ## Design Explained
 This section will cover OS.js's overall architecture and codecolabs files and structure along with libraries and packages used.
 
@@ -150,7 +153,6 @@ Each file will now be explained:
 - **index.js:** This is the entry point in the application and it is where the window is created. The react app is imported to this application and is rendered
   inside the window that has been created. The react app is attached to the _$content_ element. The apps relevant variables are stored inside AppData class
   object for later use. Below is a screenshot of the code performing this action. The socket connection to OS.js is also setup here.
-  
   ![alt text](image-8.png)
 
 - **App.js:** This is the main entry point for the react app. The '/' route is served unless it is a client connecting through on invite link then 'Landing'
@@ -166,7 +168,7 @@ Each file will now be explained:
   session.
 - **appdata.js:** This is a class that is created in _index.js_ and stores all the app data such as core for later use in other files.
   Below is a screenshot of its contents.
-  
+
   ![alt text](image-9.png)
 
 - **editoroptions.js:** This is the options used for Monaco editor.
@@ -174,7 +176,7 @@ Each file will now be explained:
 - **sessionclass.js:** A lot of variables are stored in the session class as you might have noticed. This class object is created before
   the user is navigated to the main page and is interacted with throughout the app. It is basically makes the variables within it
   globally accessible to any file in the application. Below is a screenshot of the class.
-  
+
   ![alt text](image-10.png)
 
 - **useActionListener.js:** This file uses a hook that uses useEffect() from react to listen for changes in the document that Monaco has loaded.
