@@ -66,7 +66,7 @@ possible.
 _Please follow these steps to contribute to the project:_
 I personally used the OS.js documentation to create a application inside OS.js and then I copied and pasted that application
 into MULE's directory specifically in **mule/src/packages**. I found it easier to build and test the application without
-Docker and then build the container once the finished product has been realised.
+Docker and then build the container once the finished product had been realised.
 1. _Building an application in OS.js:_
    Go to OS.js and clone its repository the instructions to set it up on your own machine are explained there. Use the non-docker
    setup instructions!
@@ -75,7 +75,8 @@ Docker and then build the container once the finished product has been realised.
      ```
 2. _Copy codecolab and build:_
    Copy the codecolab folder from the MULE repo provided above and copy it into **src/packages** in the OS.js repository on your machine.
-   Assuming you have OS.js running on your local machine stop it and run the commands below.
+   Assuming you have OS.js running on your local machine stop it and run the commands below. Do not copy the dist and node_modules package from
+   codecolab!
      ```cd
      cd src/packages/codecolab
      ```
@@ -91,9 +92,9 @@ Docker and then build the container once the finished product has been realised.
      ```
 3. _Serve and Watch:_
    Once the build command has run successfully codecolab will now be installed as a package. Use the **npm run serve** command to start OS.js
-   it should be running on **http://localhost:8000/**. (_An important note to mention is the invite link generator does not take into
-   account what port or URL the server is running on so please change this in the source code. The link generator is located in codecolab
-   /server_modules/newsession.js line 15._). To run a watch on codecolab package use the commands provided below.
+   it should be running on **http://localhost:8000/**. _(An important note to mention is the invite link generator does not take into_
+   _account what port or URL the server is running on so please change this in the source code. The link generator is located in codecolab_
+   _/server-modules/newsession.js line 15.)_. To run a watch on codecolab package use the commands provided below.
     ```
     cd src/packages/codecolab
     ```
@@ -132,9 +133,19 @@ As seen in the screenshot above the top level contains the folders assets, compo
 - _Pages_ contains the pages/routes that the application uses
 - _Utils_ contains important functions that are used in different parts of the application like on click events
 
+**packages used:**
+__These are the main packages used to create codecolab.__
+- _Webpack_ This package is a key part of OS.js and is responsible for bundling and serving MULE/OS.js to the client.
+- _React-Monaco-editor_ This is a IDE that can be used on a website. It is the same IDE that VSCODE uses and comes with
+  a lot of helpful built in functionality such as _onDidModelChangeContent()_.
+- _Babel-loader_ This is responsible for transpiling the js files.
+- _CSS AND SASS loader_ This is responsible for transpiling the css files in the project.
+- _React_ This is a well known UI package that is used for creating SPA's.
+- _ws_ This a basic websocket package that allows for web socket servers to be created in addition to creating a connection between client and server.
+
 **File Description**
 
-Each files will now be explained:
+Each file will now be explained:
 
 - **index.js:** This is the entry point in the application and it is where the window is created. The react app is imported to this application and is rendered
   inside the window that has been created. The react app is attached to the _$content_ element. The apps relevant variables are stored inside AppData class
@@ -207,3 +218,8 @@ Each files will now be explained:
 - **newsession.js:** This creates an object that stores the session data. A new session object is created each time a user creates a new file sharing session.
   It also has _createShareLink()_ and _getLanguage()_ which is responsible for creating the share link and extracting the language of the file from its
   extension.
+- **LinkHandler.js:** This file is contained outside the codecolab package and is used to handle the /open route for the invite link. It basically serves the
+  extracts the sessionID passed through the link data and serves the index html of mule. It will then execute the javascript to open codecolab on the sessionID
+  that was ectracted from the link. This service provider is always active on the server side. It was created through _npm make:serviceprovider_. This command
+  is from the OS.js documentation  and more details on this can be found there. Here is a screenshot of the LinkHandler provider.
+  ![alt text](image.png)

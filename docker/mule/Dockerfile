@@ -27,7 +27,7 @@ RUN npm install
 
 # Copy packages, install their dependencies, and build them
 COPY --chown=node:node ./mule/src/packages ./src/packages
-RUN for dir in src/packages/codecolab; do (cd "$dir" && npm install && npm run build); done
+RUN for dir in src/packages/*; do (cd "$dir" && npm install && npm run build); done
 
 # Copy the rest of the files
 COPY --chown=node:node ./mule/ ./
