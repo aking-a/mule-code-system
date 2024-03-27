@@ -6,6 +6,13 @@ a learning environment for Maynooth university students. Codecolab (the project 
 MULE environment to have the ability to collaboratively edit code documents in real time with their friends. Once MULE has been installed on your machine using 
 Docker, MULE should be running on port 80. Codecolab will be located in the menu on the top left under the 'Other' menu item. 
 
+## Impotant Note
+_The repository provided will not show you a full commint history of the project from start to finish this is because codecolab was developed in the OS.js repo and then_
+_when it was fully developed and tested it was copied and pasted into the MULE repository. Below is a link to the repo with the full commit history_
+```
+https://github.com/aking-a/OS-App-FYP
+```
+
 ## Installation
 This will guide you to enable you to be able to install and build MULE with the codecolab plugin already installed. Please note that wsl2 and docker is slow
 and it will take time for the application to work properly if you are using a windows system. This is a known issue and is caused by windows and wsl2. I was
