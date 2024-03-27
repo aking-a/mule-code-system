@@ -12,7 +12,7 @@ class CreateNewSession {
     }
     //creates a share link for the session with /open?data= appended to the base urlso it that a cutsom service provider will be activated
     createShareLink(inputID) {
-        const baseURL = "http://localhost:8000/open";
+        const baseURL = "http://localhost:80/open";
         // Encode the data string
         const encodedData = encodeURIComponent(inputID);
 
